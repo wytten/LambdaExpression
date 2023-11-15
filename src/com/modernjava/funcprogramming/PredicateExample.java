@@ -17,5 +17,8 @@ public class PredicateExample {
 
         //i>10 && i%2 !=0
         System.out.println(p1.and(p2.negate()).test(33));
-    }
+ 
+        // !(i>10 && i%2 !=0)
+        System.out.println(p1.and(p2.negate()).negate().test(33));
+}
 }
