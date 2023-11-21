@@ -8,10 +8,10 @@ import java.util.function.Predicate;
 
 public class BiFunctionExample {
     public static void main(String[] args) {
-        //Bifuction 2 inputs List<Instructors> and second is predicate which will filter if instructor has online
+        //Bifunction 2 inputs List<Instructors> and second is predicate which will filter if instructor has online
         //courses and return a map of <String,Integer> string is name and Integer is the years of experience
 
-        Predicate<Instructor> p1 = (i) -> i.isOnlineCourses()==true;
+        Predicate<Instructor> p1 = (i) -> i.isOnlineCourses();
         BiFunction<List<Instructor>, Predicate<Instructor>, Map<String,Integer>> mapBiFunction =
                 ((instructors, instructorPredicate) -> {
                     Map<String, Integer> map = new HashMap<>();
